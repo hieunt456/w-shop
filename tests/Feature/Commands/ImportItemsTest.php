@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Commands;
+namespace Tests\Feature\Commands;
 
 use Mockery;
 use Tests\TestCase;
