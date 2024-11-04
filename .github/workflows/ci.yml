@@ -6,6 +6,8 @@ jobs:
   tests:
     name: Run tests
     runs-on: ubuntu-latest
+    env:
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
     steps:
       - uses: actions/checkout@v3
 
