@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WolfShop;
+namespace WolfShop\Domains\Item;
 
 class Item implements \Stringable
 {
