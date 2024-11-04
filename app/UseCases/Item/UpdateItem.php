@@ -8,7 +8,7 @@ use WolfShop\Domains\Item\Item;
 use WolfShop\Domains\Item\ItemRepositoryInterface;
 use WolfShop\Domains\Item\Strategies\ItemUpdate\ItemUpdateStrategyFactory;
 
-final class UpdateItem // WolfService class after refactoring
+final class UpdateItem
 {
     public function __construct(
         private readonly ItemRepositoryInterface $repository,
