@@ -8,9 +8,9 @@ final class ApiItemDTO
 {
     private string $name;
 
-    private ?int $sellIn;
+    private int $sellIn;
 
-    private ?int $quality;
+    private int $quality;
 
     public function __construct(
         private readonly array $data,
@@ -20,22 +20,22 @@ final class ApiItemDTO
 
     private function parseData(): void
     {
-        $this->name = $this->data['name'] ?? null;
-        $this->sellIn = $this->data['sellIn'] ?? null;
-        $this->quality = $this->data['quality'] ?? null;
+        $this->name = $this->data['name'] ?? '';
+        $this->sellIn = $this->data['sellIn'] ?? config('wolfshop.normal_item_default_sell_in');
+        $this->quality = $this->data['quality'] ?? config('wolfshop.normal_item_default_quality');
     }
 
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getSellIn(): ?int
+    public function getSellIn(): int
     {
         return $this->sellIn;
     }
 
-    public function getQuality(): ?int
+    public function getQuality(): int
     {
         return $this->quality;
     }

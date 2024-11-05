@@ -45,8 +45,9 @@ final class ImportItems extends Command
 
             foreach ($rawItems as $rawItem) {
                 $apiItemDto = new ApiItemDTO($rawItem);
+                $itemName = $apiItemDto->getName();
 
-                if (!$itemName = $apiItemDto->getName()) {
+                if (empty($itemName)) {
                     $this->warn('Item name is missing. Skipping...');
                     continue;
                 }

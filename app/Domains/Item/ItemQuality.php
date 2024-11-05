@@ -15,9 +15,4 @@ final class ItemQuality
     public const DAILY_DECREASE = 1;
 
     public const DAILY_DECREASE_DOUBLE = 2;
-
-    public static function defaultValue(): int
-    {
-        return config('wolfshop.normal_item_default_quality');
-    }
 }
